@@ -43,3 +43,6 @@ _ReSharper.*/
 SimpleExt/dlldata.c
 SimpleExt/SimpleExt.h
 *.msi
+
+*.swc
+*.swf
