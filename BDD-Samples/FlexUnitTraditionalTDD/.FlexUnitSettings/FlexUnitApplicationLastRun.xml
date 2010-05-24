@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="FlexUnitTraditionalTDD">
+<testsuite name="traditional.tests.accounting.company:EmployerTests" type="testsuiteclass"/>
+<testsuite name="traditional.tests.accounting.company:EmployeeTests" type="testsuiteclass"/>
+</testsuite>
+</testrun>

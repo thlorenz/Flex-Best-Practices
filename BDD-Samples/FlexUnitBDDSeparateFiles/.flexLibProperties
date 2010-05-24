@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" version="3">
+  <includeClasses>
+    <classEntry path="bddseparate.specs.accounting.company.employee.EmployeeSpecs"/>
+    <classEntry path="bddseparate.specs.accounting.company.employee.initially"/>
+    <classEntry path="bddseparate.specs.accounting.company.employee.when_told_that_he_is_fired"/>
+    <classEntry path="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_1_dollar_paying_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.Ctx_BankAccount_is_connected"/>
+    <classEntry path="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_2_dollars_paying_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected.paying_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.EmployerSpecs"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.when_employee_did_good_work.and_we_evaluate_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work.and_we_evaluate_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.employee_was_not_fired.but_his_salary_is_zero.paying_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.employee_was_not_fired.Ctx_EmployeeWasNotFired"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_not_paid_paying_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_paid_paying_him"/>
+    <classEntry path="bddseparate.specs.accounting.company.employer.employee_was_fired.paying_him"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

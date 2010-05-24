@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="FlexUnitBDDWithMockito">
+<testsuite name="org.mockito:MockitoTestCase" type="testsuiteclass"/>
+<testsuite name="org.mockito.integrations.flexunit3:MockitoTestCase" type="testsuiteclass"/>
+</testsuite>
+</testrun>

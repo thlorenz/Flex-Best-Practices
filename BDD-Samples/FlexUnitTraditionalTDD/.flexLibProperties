@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" version="3">
+  <includeClasses>
+    <classEntry path="traditional.tests.accounting.company.EmployeeTests"/>
+    <classEntry path="traditional.fakes.BankAccountMock"/>
+    <classEntry path="traditional.fakes.EmployeeMock"/>
+    <classEntry path="traditional.tests.accounting.company.EmployerTests"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
