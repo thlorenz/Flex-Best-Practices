@@ -20,6 +20,8 @@ package bddseparate.specs.accounting.company.employee
 		public function salary_should_be_zero() : void
 		{
 			the(_sut.salary).shouldEqual(0);
+
+
 		}
 	}
 }

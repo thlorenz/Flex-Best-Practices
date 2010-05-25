@@ -108,8 +108,9 @@ package specutils.runners
 
 
 /**
- * This is class is included in the run contexts, to give mockito one test class which has the meta-tag that mockito looks for to initialize.
- * Alternatively we could put it on one of our context classes, but this is easier.
+ * This class is included in the run contexts, to give mockito one test class
+ * which has the meta-tag that mockito looks for to initialize.
+ * Alternatively we could put it on one of our context classes, but this is more convenient.
  * @author tlorenz
  */
 [RunWith("org.mockito.integrations.flexunit4.MockitoClassRunner")]

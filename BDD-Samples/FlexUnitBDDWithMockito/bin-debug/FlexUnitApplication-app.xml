@@ -14,14 +14,14 @@
 -->
 
 	<!-- The application identifier string, unique to this application. Required. -->
-	<id>FlexUnitBDDWithMockito</id>
+	<id>FlexUnitApplication</id>
 
 	<!-- Used as the filename for the application. Required. -->
-	<filename>FlexUnitBDDWithMockito</filename>
+	<filename>FlexUnitApplication</filename>
 
 	<!-- The name that is displayed in the AIR application installer. 
 	     May have multiple values for each language. See samples or xsd schema file. Optional. -->
-	<name>FlexUnitBDDWithMockito</name>
+	<name>FlexUnitApplication</name>
 
 	<!-- An application version designator (such as "v1", "2.5", or "Alpha 1"). Required. -->
 	<version>v1</version>
@@ -40,7 +40,7 @@
 	<initialWindow>
 		<!-- The main SWF or HTML file of the application. Required. -->
 		<!-- Note: In Flash Builder, the SWF reference is set automatically. -->
-		<content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+		<content>FlexUnitApplication.swf</content>
 		
 		<!-- The title of the main window. Optional. -->
 		<!-- <title></title> -->

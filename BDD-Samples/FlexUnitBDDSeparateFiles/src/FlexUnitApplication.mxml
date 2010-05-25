@@ -2,46 +2,68 @@
 
 <!-- This is an auto generated file and is not intended for modification. -->
 
-<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
-			   xmlns:s="library://ns.adobe.com/flex/spark" 
-			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:flexui="flexunit.flexui.*" creationComplete="onCreationComplete()">
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955"
+			   minHeight="600"
+			   xmlns:flexui="flexunit.flexui.*"
+			   creationComplete="onCreationComplete()">
 	<fx:Script>
 		<![CDATA[
-			import bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work.and_we_evaluate_him;
-			import bddseparate.specs.accounting.company.employer.when_employee_did_good_work.and_we_evaluate_him;
 			import bddseparate.specs.accounting.company.employer.employee_was_not_fired.but_his_salary_is_zero.paying_him;
-			import bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_paid_paying_him;
-			import bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_not_paid_paying_him;
-			import bddseparate.specs.accounting.company.employer.employee_was_fired.paying_him;
-			import bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected.paying_him;
+			import bddseparate.specs.accounting.company.employee.initially;
 			import bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_2_dollars_paying_him;
+			import bddseparate.specs.accounting.company.employer.employee_was_fired.paying_him;
+			import bddseparate.specs.accounting.company.employer.when_employee_did_good_work.and_we_evaluate_him;
+			import bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work.and_we_evaluate_him;
 			import bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_1_dollar_paying_him;
 			import bddseparate.specs.accounting.company.employee.when_told_that_he_is_fired;
-			import bddseparate.specs.accounting.company.employee.initially;
-			
-			public function currentRunTestSuite():Array
+			import bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_paid_paying_him;
+			import org.flexunit.runner.Request;
+			import bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected.paying_him;
+			import bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_not_paid_paying_him;
+
+			public function currentRunTestSuite() : Array
 			{
-				var testsToRun:Array = new Array();
-				testsToRun.push(bddseparate.specs.accounting.company.employee.initially);
-				testsToRun.push(bddseparate.specs.accounting.company.employee.when_told_that_he_is_fired);
-				testsToRun.push(bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_1_dollar_paying_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_2_dollars_paying_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected.paying_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employer.employee_was_fired.paying_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_not_paid_paying_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_paid_paying_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employer.employee_was_not_fired.but_his_salary_is_zero.paying_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employer.when_employee_did_good_work.and_we_evaluate_him);
-				testsToRun.push(bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work.and_we_evaluate_him);
+				var testsToRun : Array = new Array();
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_not_paid_paying_him, ["should_pay_him"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected.paying_him, ["was_paid_should_be_false",
+					"should_not_update_bankaccount"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero.when_he_was_paid_paying_him, ["should_not_pay_him_again"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employee.when_told_that_he_is_fired, ["was_fired_should_be_true"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_1_dollar_paying_him, ["should_update_the_bankaccount_with_1_dollar",
+					"should_set_was_paid_to_true",
+					"should_update_the_bank_account"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work.and_we_evaluate_him, ["he_should_get_fired"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employer.when_employee_did_good_work.and_we_evaluate_him, ["he_should_not_get_fired"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employer.employee_was_fired.paying_him, ["should_throw_an_IllegalOperationException"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employee.when_bank_account_is_connected.and_salary_is_2_dollars_paying_him, ["should_set_was_paid_to_true",
+					"should_update_the_bankaccount_with_2_dollars",
+					"should_update_the_bank_account"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employee.initially, ["salary_should_be_zero",
+					"wasFired_should_be_false",
+					"wasPaid_should_be_false"]));
+
+				testsToRun.push(Request.methods(bddseparate.specs.accounting.company.employer.employee_was_not_fired.but_his_salary_is_zero.paying_him, ["should_throw_an_IllegalOperationException"]));
 				return testsToRun;
 			}
-			
-			
-			private function onCreationComplete():void
+
+
+			private function onCreationComplete() : void
 			{
 				testRunner.runWithFlexUnit4Runner(currentRunTestSuite(), "FlexUnitBDDSeparateFiles");
 			}
-			
 		]]>
 	</fx:Script>
 	<fx:Declarations>

@@ -25,6 +25,12 @@ package specutils.extensions
 			return this;
 		}
 
+		public function shouldNotEqual(expected : Object) : SpecificationExtensions
+		{
+			assertThat(_actual, not(equalTo(expected)));
+			return this;
+		}
+
 		public function shouldBeSameInstanceAs(expected : Object) : SpecificationExtensions
 		{
 			assertThat(_actual, sameInstance(expected));

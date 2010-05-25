@@ -45,25 +45,25 @@ package traditional.tests.accounting.company
 		}
 
 		[Test]
-		public function Initially_WasPaid_IsFalse() : void
+		public function Initially_WasPaidIsFalse() : void
 		{
 			assertFalse(_sut.wasPaid);
 		}
 
 		[Test]
-		public function Initially_WasFired_IsFalse() : void
+		public function Initially_WasFiredIsFalse() : void
 		{
 			assertFalse(_sut.wasFired);
 		}
 
 		[Test]
-		public function Initially_Salary_IsZero() : void
+		public function Initially_SalaryIsZero() : void
 		{
 			assertThat(_sut.salary, equalTo(0));
 		}
 
 		[Test]
-		public function WhenTold_ThatHeIsFired_WasFiredIsTrue() : void
+		public function WhenToldThatHeIsFired_WasFiredIsTrue() : void
 		{
 			_sut.fire();
 

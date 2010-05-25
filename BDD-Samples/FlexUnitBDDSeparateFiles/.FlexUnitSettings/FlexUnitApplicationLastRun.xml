@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testrun name="" >
 <testsuite  name="Default Test Suite" project="FlexUnitBDDSeparateFiles">
-<testsuite name="bddseparate.specs.accounting.company.employee:initially" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employee:when_told_that_he_is_fired" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_1_dollar_paying_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_2_dollars_paying_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected:paying_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_fired:paying_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero:when_he_was_not_paid_paying_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero:when_he_was_paid_paying_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_not_fired.but_his_salary_is_zero:paying_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employer.when_employee_did_good_work:and_we_evaluate_him" type="testcaseclass"/>
-<testsuite name="bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work:and_we_evaluate_him" type="testcaseclass"/>
+<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_fired:paying_him" type="testcaseclass">
+<testcase name="should_throw_an_IllegalOperationException" classname="bddseparate.specs.accounting.company.employer.employee_was_fired:paying_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employee:when_told_that_he_is_fired" type="testcaseclass">
+<testcase name="was_fired_should_be_true" classname="bddseparate.specs.accounting.company.employee:when_told_that_he_is_fired"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_1_dollar_paying_him" type="testcaseclass">
+<testcase name="should_update_the_bankaccount_with_1_dollar" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_1_dollar_paying_him"/>
+<testcase name="should_set_was_paid_to_true" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_1_dollar_paying_him"/>
+<testcase name="should_update_the_bank_account" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_1_dollar_paying_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_2_dollars_paying_him" type="testcaseclass">
+<testcase name="should_set_was_paid_to_true" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_2_dollars_paying_him"/>
+<testcase name="should_update_the_bankaccount_with_2_dollars" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_2_dollars_paying_him"/>
+<testcase name="should_update_the_bank_account" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_connected:and_salary_is_2_dollars_paying_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected:paying_him" type="testcaseclass">
+<testcase name="was_paid_should_be_false" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected:paying_him"/>
+<testcase name="should_not_update_bankaccount" classname="bddseparate.specs.accounting.company.employee.when_bank_account_is_not_connected:paying_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employee:initially" type="testcaseclass">
+<testcase name="salary_should_be_zero" classname="bddseparate.specs.accounting.company.employee:initially"/>
+<testcase name="wasFired_should_be_false" classname="bddseparate.specs.accounting.company.employee:initially"/>
+<testcase name="wasPaid_should_be_false" classname="bddseparate.specs.accounting.company.employee:initially"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero:when_he_was_not_paid_paying_him" type="testcaseclass">
+<testcase name="should_pay_him" classname="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero:when_he_was_not_paid_paying_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero:when_he_was_paid_paying_him" type="testcaseclass">
+<testcase name="should_not_pay_him_again" classname="bddseparate.specs.accounting.company.employer.employee_was_not_fired.and_his_salary_is_greater_zero:when_he_was_paid_paying_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employer.employee_was_not_fired.but_his_salary_is_zero:paying_him" type="testcaseclass">
+<testcase name="should_throw_an_IllegalOperationException" classname="bddseparate.specs.accounting.company.employer.employee_was_not_fired.but_his_salary_is_zero:paying_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employer.when_employee_did_good_work:and_we_evaluate_him" type="testcaseclass">
+<testcase name="he_should_not_get_fired" classname="bddseparate.specs.accounting.company.employer.when_employee_did_good_work:and_we_evaluate_him"/>
+</testsuite>
+<testsuite name="bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work:and_we_evaluate_him" type="testcaseclass">
+<testcase name="he_should_get_fired" classname="bddseparate.specs.accounting.company.employer.when_employee_did_no_good_work:and_we_evaluate_him"/>
+</testsuite>
 </testsuite>
 </testrun>

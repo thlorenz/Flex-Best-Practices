@@ -6,7 +6,7 @@ package bddseparate.specs.accounting.company.employee.when_bank_account_is_conne
 	{
 		override protected function context() : void
 		{
-			// Make sure we build up on the main context
+			// Make sure we build up onto the main context
 			super.context();
 			_bankAccount_Mock.isConnected = true;
 		}

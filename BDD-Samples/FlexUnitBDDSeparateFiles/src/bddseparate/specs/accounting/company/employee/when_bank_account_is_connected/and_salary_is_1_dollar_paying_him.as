@@ -34,7 +34,5 @@ package bddseparate.specs.accounting.company.employee.when_bank_account_is_conne
 		{
 			the(_bankAccount_Mock.updateWithAmountWasCalledWith).shouldEqual(SALARY);
 		}
-
-
 	}
 }
